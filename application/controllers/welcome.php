@@ -24,7 +24,15 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		//$this->load->view('welcome_message');
+		$this->benchmark->mark('code_start');
+		
+		$this->load->library("ci_smarty");
+		$this->ci_smarty->assign("elapsed_time","{elapsed_time}");
+		$this->ci_smarty->display("welcome_message.php");
+		
+		$this->benchmark->mark('code_end');
+		echo $this->benchmark->elapsed_time('code_start', 'code_end');
 	}
 }
 
