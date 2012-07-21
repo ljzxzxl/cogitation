@@ -20,6 +20,20 @@ define('DIR_WRITE_MODE', 0777);
 
 /*
 |--------------------------------------------------------------------------
+| Libraries Mysql DB Config
+|--------------------------------------------------------------------------
+|
+| /application/libraries/Ci_mysql.php
+|
+*/
+define('DB_HOST','localhost:3306');
+define('DB_NAME','cogitation');
+define('DB_USER','root');
+define('DB_PASSWORD','');
+define('DB_CHARSET','utf8');
+
+/*
+|--------------------------------------------------------------------------
 | File Stream Modes
 |--------------------------------------------------------------------------
 |
