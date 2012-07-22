@@ -45,6 +45,14 @@ class Ci_smarty_test extends CI_Controller {
 		{
 			echo 'IP Valid';
 		}
+		//CI单元测试类测试
+		$test = 1 + 1;
+		$expected_result = 2;
+		$test_name = 'Adds one plus one';
+		$this->load->library('unit_test');
+		$this->unit->run($test, $expected_result, $test_name);
+		echo $this->unit->report();
+		print_r($this->unit->result());
 	}
 }
 
