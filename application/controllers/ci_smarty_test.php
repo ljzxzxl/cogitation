@@ -24,12 +24,27 @@ class Ci_smarty_test extends CI_Controller {
 	
 	public function index()
 	{
+		//smarty测试
 		$this->load->library("ci_smarty");//ci_smarty首字母可小写.不解请百度
 		$this->ci_smarty->assign("hello","<h1>this is hello page</h1>"); //smarty设置值
 		$this->ci_smarty->display("test.html");
+		//mysql测试
 		$this->load->library("ci_mysql");
 		$result = $this->ci_mysql->getAll("SELECT user_id, user_name, email FROM ecs_admin_user");
 		print_r($result);
+		//CI输入类测试
+		echo $this->input->get('c', TRUE);
+		echo $this->input->post('c', TRUE);
+		echo $this->input->get_post('c', TRUE);
+		echo $ip = $this->input->ip_address();
+		if(!$this->input->valid_ip($ip))
+		{
+			echo 'IP Not Valid';
+		}
+		else
+		{
+			echo 'IP Valid';
+		}
 	}
 }
 
