@@ -111,6 +111,11 @@ $autoload['language'] = array();
 
 $autoload['model'] = array();
 
+/* 引入核心类库 */
+include_once(APPPATH.'core/function.php');
+
+/* 导航栏初始化 */
+include_once(APPPATH.'config/menu.inc.php');
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
