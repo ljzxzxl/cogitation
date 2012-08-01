@@ -30,6 +30,8 @@ if(!defined('DS'))
 	define('DS', DIRECTORY_SEPARATOR);//兼容linux,windows表示"/"
 if(!defined('THEMES'))
 	define('THEMES', 'views/tpl');//定义当前使用views/下的主题文件夹
+if(!defined('CHARSET'))
+	define('CHARSET','utf-8');
 
 /*
  *---------------------------------------------------------------
