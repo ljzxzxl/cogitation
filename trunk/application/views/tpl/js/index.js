@@ -74,7 +74,7 @@ function addHistoryItem(tab, item){
             $('#history dd:last').remove();
         }
         var lnk = $('<a href="javascript:;" id="' + tab + '-' + item + '">' + menu[tab]['children'][item]['text'] + '</a>').css({"color":"#98a9c2"});
-        var close = $('<a href="javascript:;" class="close"><img src="templates/style/images/close.gif" / ></a>');
+        var close = $('<a href="javascript:;" class="close"><img src="application/views/tpl/style/images/close.gif" / ></a>');
         lnk.click(function(){
             openItem(item, tab);
         });
