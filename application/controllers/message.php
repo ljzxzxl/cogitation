@@ -9,10 +9,8 @@ class Message extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->library("ci_smarty");
-		$this->ci_smarty->assign("charset",CHARSET);
-		$this->ci_smarty->assign("theme",APPPATH.THEMES);
-		$this->ci_smarty->display("message.html");
+		$message = $this->input->get('message');
+		$this->Message_model->show_message($message);
 	}
 }
 
