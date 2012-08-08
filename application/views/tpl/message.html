@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={{$charset}}" />
-<title> {$lang.ecmall_sysmsg} -- Powered by ECMall </title>
+<title> 系统消息 </title>
 <link href="{{$theme}}/style/admin.css" rel="stylesheet" type="text/css" />
 <style>
 <!--
@@ -19,14 +19,11 @@ p {color: #999; border-top: 1px solid #cbe4f5; text-align: center; padding-top: 
 </head>
 
 <body>
-<h1>{$lang.ecmall_sysmsg}</h1>
+<h1>系统消息</h1>
 <dl>
     <dt>{{$message}}</dt>
-    {if $err_file}
-    <dd>Error File: <b>{$err_file}</b> at <b>{$err_line}</b> line.</dd>
-    {/if}
     {if $redirect}
-    <dd>{$lang.auto_redirect}</dd>
+    <dd>自动跳转至页面</dd>
     {/if}
     {foreach from=$links item=item}
     <dd><a href="{$item.href}" class="forward">{$item.text}</a></dd>
@@ -39,6 +36,6 @@ window.setTimeout("{$redirect}", 5000);
 //-->
 </script>
 {/if}
-<p>Copyright 2003-2009 ShopEx Inc.,All rights reserved.</p>
+{{include file="copyright.html"}}
 </body>
 </html>
