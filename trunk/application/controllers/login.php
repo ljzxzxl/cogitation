@@ -9,9 +9,6 @@ class Login extends CI_Controller {
 	
 	public function index()
 	{
-		$this->load->library("ci_smarty");
-		$this->ci_smarty->assign("charset",CHARSET);
-		$this->ci_smarty->assign("theme",APPPATH.THEMES);
 		$this->ci_smarty->display("login.html");
 	}
 }
