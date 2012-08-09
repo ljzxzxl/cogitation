@@ -16,6 +16,7 @@ class System_model extends CI_Model {
 		/*初始化系统基础变量*/
 		$this->ci_smarty->assign("charset",CHARSET);
 		$this->ci_smarty->assign("theme",APPPATH.THEMES);
+		$this->ci_smarty->assign("site_url","http://zhuangxiu.jia.com");
 	}
 	
 	/**
