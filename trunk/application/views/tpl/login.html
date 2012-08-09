@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset={{$charset}}" />
-<title>{$lang.login_required}- Powered by ECMall</title>
+<title>网站后台登录 - Powered by CI</title>
 <script type="text/javascript" src="{{$theme}}/js/jquery.js" charset="utf-8"></script>
 <script type="text/javascript" src="{{$theme}}/js/ecmall.js" charset="utf-8"></script>
 <link href="{{$theme}}/style/admin.css" rel="stylesheet" type="text/css" />
@@ -20,18 +20,18 @@ $(function(){
 </head>
 <body>
 <div id="enter">
-    <h1><img alt="{$lang.ecmall_admin}" src="{{$theme}}/style/images/enter_logo.gif" /></h1>
+    <h1><img alt="网站后台" src="{{$theme}}/style/images/enter_logo.gif" /></h1>
     <table>
     <form method="post">
         <tr>
-            <td>{$lang.username}:</td>
+            <td>用户名:</td>
             <td colspan="3"><input class="text" type="text" id="user_name" name="user_name" /></td>
         </tr>
         <tr>
-            <td>{$lang.password}:</td>
+            <td>密&nbsp;&nbsp;&nbsp;码:</td>
             <td class="width160"><input class="text" type="password" name="password" /></td>
             <!--{if $captcha}-->
-            <td>{$lang.captcha}:</td>
+            <td>验证码:</td>
             <td><input class="text2" type="text" name="captcha" /> <div class="validates"><img onclick="this.src='index.php?app=captcha&' + Math.round(Math.random()*10000)" style="cursor:pointer;" class="validate" src="index.php?app=captcha&{$random_number}" /></div></td>
             <!--{else}-->
             <td colspan="2">&nbsp;</td>
