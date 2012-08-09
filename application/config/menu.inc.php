@@ -8,204 +8,127 @@ function Nav_Menu()
 {
 	$nav_menu = array(
 		'dashboard' => array(
-			'text'      => 'dashboard',
-			'subtext'   => 'offen_used',
+			'text'      => '控制台',
+			'subtext'   => '常用操作',
 			'default'   => 'welcome',
 			'children'  => array(
 				'welcome'   => array(
-					'text'  => 'welcome_page',
-					'url'   => 'index.php?act=welcome',
+					'text'  => '欢迎页面',
+					'url'   => 'index.php?c=welcome',
 				),
 				'aboutus'   => array(
-					'text'  => 'aboutus_page',
-					'url'   => 'index.php?act=aboutus',
-				),
-				'base_setting'  => array(
-					'parent'=> 'setting',
-					'text'  => 'base_setting',
-					'url'   => 'index.php?app=setting&act=base_setting',
-				),
-				'user_manage' => array(
-					'text'  => 'user_manage',
-					'parent'=> 'user',
-					'url'   => 'index.php?app=user',
-				),
-				'store_manage'  => array(
-					'text'  => 'store_manage',
-					'parent'=> 'store',
-					'url'   => 'index.php?app=store',
-				),
-				'goods_manage'  => array(
-					'text'  => 'goods_manage',
-					'parent'=> 'goods',
-					'url'   => 'index.php?app=goods',
-				),
-				'order_manage' => array(
-					'text'  => 'order_manage',
-					'parent'=> 'trade',
-					'url'   => 'index.php?app=order'
+					'text'  => '关于我们',
+					'url'   => 'index.php?c=aboutus',
 				),
 			),
 		),
-		// 设置
-		'setting'   => array(
-			'text'      => 'setting',
-			'default'   => 'base_setting',
+		// 订单管理
+		'order_manage' => array(
+			'text'      => '订单管理',
+			'default'   => 'order_allot',
 			'children'  => array(
-				'base_setting'  => array(
-					'text'  => 'base_setting',
-					'url'   => 'index.php?app=setting&act=base_setting',
-				),
-				'region' => array(
-					'text'  => 'region',
-					'url'   => 'index.php?app=region',
-				),
-				'payment' => array(
-					'text'  => 'payment',
-					'url'   => 'index.php?app=payment',
-				),
-				'theme' => array(
-					'text'  => 'theme',
-					'url'   => 'index.php?app=theme',
-				),
-				'template' => array(
-					'text'  => 'template',
-					'url'   => 'index.php?app=template',
-				),
-				'mailtemplate' => array(
-					'text'  => 'noticetemplate',
-					'url'   => 'index.php?app=mailtemplate',
+				'order_allot'=> array(
+					'text'  => '订单分配',
+					'url'   => 'index.php?c=order_allot',
 				),
 			),
 		),
-		// 商品
-		'goods' => array(
-			'text'      => 'goods',
-			'default'   => 'goods_manage',
+		// 呼叫管理
+		'call_manage' => array(
+			'text'      => '呼叫管理',
+			'default'   => 'order_allot',
 			'children'  => array(
-				'gcategory' => array(
-					'text'  => 'gcategory',
-					'url'   => 'index.php?app=gcategory',
-				),
-				'brand' => array(
-					'text'  => 'brand',
-					'url'   => 'index.php?app=brand',
-				),
-				'goods_manage' => array(
-					'text'  => 'goods_manage',
-					'url'   => 'index.php?app=goods',
-				),
-				'recommend_type' => array(
-					'text'  => 'recommend_type',
-					'url'   => 'index.php?app=recommend'
-				),
-
-			),
-		),
-		// 店铺
-		'store'     => array(
-			'text'      => 'store',
-			'default'   => 'store_manage',
-			'children'  => array(
-				'sgrade' => array(
-					'text'  => 'sgrade',
-					'url'   => 'index.php?app=sgrade',
-				),
-				'scategory' => array(
-					'text'  => 'scategory',
-					'url'   => 'index.php?app=scategory',
-				),
-				'store_manage'  => array(
-					'text'  => 'store_manage',
-					'url'   => 'index.php?app=store',
+				'order_allot'=> array(
+					'text'  => '订单分配',
+					'url'   => 'index.php?c=order_allot',
 				),
 			),
 		),
-		// 会员
-		'user' => array(
-			'text'      => 'user',
-			'default'   => 'user_manage',
+		// 内容管理
+		'content_manage' => array(
+			'text'      => '内容管理',
+			'default'   => 'message_manage',
 			'children'  => array(
-				'user_manage' => array(
-					'text'  => 'user_manage',
-					'url'   => 'index.php?app=user',
-				),
-				'admin_manage' => array(
-					'text' => 'admin_manage',
-					 'url'   => 'index.php?app=admin',
-				 ),
-				 'user_notice' => array(
-					'text' => 'user_notice',
-					'url'  => 'index.php?app=notice',
-				 ),
-			),
-		),
-		// 交易
-		'trade' => array(
-			'text'      => 'trade',
-			'default'   => 'order_manage',
-			'children'  => array(
-				'order_manage' => array(
-					'text'  => 'order_manage',
-					'url'   => 'index.php?app=order'
+				'message_manage'=> array(
+					'text'  => '留言管理',
+					'url'   => 'index.php?c=message_manage',
 				),
 			),
 		),
-		// 网站
-		'website' => array(
-			'text'      => 'website',
-			'default'   => 'acategory',
+		// 公司管理
+		'company_manage' => array(
+			'text'      => '公司管理',
+			'default'   => 'company_list',
 			'children'  => array(
-				'acategory' => array(
-					'text'  => 'acategory',
-					'url'   => 'index.php?app=acategory',
-				),
-				'article' => array(
-					'text'  => 'article',
-					'url'   => 'index.php?app=article',
-				),
-				'partner' => array(
-					'text'  => 'partner',
-					'url'   => 'index.php?app=partner',
-				),
-				'navigation' => array(
-					'text'  => 'navigation',
-					'url'   => 'index.php?app=navigation',
-				),
-				'db' => array(
-					'text'  => 'db',
-					'url'   => 'index.php?app=db&amp;act=backup',
-				),
-				'groupbuy' => array(
-					'text' => 'groupbuy',
-					'url'  => 'index.php?app=groupbuy',
-				),
-				'consulting' => array(
-					'text'  =>  'consulting',
-					'url'   => 'index.php?app=consulting',
-				),
-				'share_link' => array(
-					'text'  =>  'share_link',
-					'url'   => 'index.php?app=share',
+				'company_list'=> array(
+					'text'  => '公司列表',
+					'url'   => 'index.php?c=company_list',
 				),
 			),
 		),
-		// 扩展
-		'extend' => array(
-			'text'      => 'extend',
-			'default'   => 'plugin',
+		// 服务管理
+		'service_manage' => array(
+			'text'      => '服务管理',
+			'default'   => 'supervision',
 			'children'  => array(
-				'plugin' => array(
-					'text'  => 'plugin',
-					'url'   => 'index.php?app=plugin',
+				'supervision'=> array(
+					'text'  => '监理服务',
+					'url'   => 'index.php?c=supervision',
 				),
-				'module' => array(
-					'text'  => 'module',
-					'url'   => 'index.php?app=module&act=manage',
+			),
+		),
+		// 广告管理
+		'ad_manage' => array(
+			'text'      => '广告管理',
+			'default'   => 'ad_position',
+			'children'  => array(
+				'ad_position'=> array(
+					'text'  => '广告位',
+					'url'   => 'index.php?c=ad_position',
 				),
-				'widget' => array(
-					'text'  => 'widget',
-					'url'   => 'index.php?app=widget',
+			),
+		),
+		// 审核管理
+		'check_manage' => array(
+			'text'      => '审核管理',
+			'default'   => 'free_shop',
+			'children'  => array(
+				'free_shop'=> array(
+					'text'  => '免费开店',
+					'url'   => 'index.php?c=free_shop',
+				),
+			),
+		),
+		// 流量管理
+		'pv_manage' => array(
+			'text'      => '流量管理',
+			'default'   => 'ald_report',
+			'children'  => array(
+				'ald_report'=> array(
+					'text'  => '阿拉丁',
+					'url'   => 'index.php?c=ald_report',
+				),
+			),
+		),
+		// 数据管理
+		'data_manage' => array(
+			'text'      => '数据管理',
+			'default'   => 'pv_report',
+			'children'  => array(
+				'pv_report'=> array(
+					'text'  => '流量报表',
+					'url'   => 'index.php?c=pv_report',
+				),
+			),
+		),
+		// 系统管理
+		'system_manage' => array(
+			'text'      => '系统管理',
+			'default'   => 'areaflag_manage',
+			'children'  => array(
+				'areaflag_manage'=> array(
+					'text'  => '区域管理',
+					'url'   => 'index.php?c=areaflag_manage',
 				),
 			),
 		),
