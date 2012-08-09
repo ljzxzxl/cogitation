@@ -4,7 +4,7 @@
 <!-- Use IE7 mode -->
 <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7 charset={{$charset}}" />
 <meta http-equiv="Content-Type" content="text/html;charset={{$charset}}" />
-<title>{$lang.ecmall_admin} -- Powered by ECMall</title>
+<title>网站管理后台 - Powered by CI</title>
 <link href="{{$theme}}/style/admin.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="{{$theme}}/js/jquery.js" charset="utf-8"></script>
 <script type="text/javascript" src="{{$theme}}/js/ecmall.js" charset="utf-8"></script>
@@ -32,9 +32,9 @@ var menu = {{$menu_json}};
 </div>
 <div id="head">
     <div id="logo"><a href="index.php"><img src="{{$theme}}/style/images/logo.gif" alt="ECMall" /></a></div>
-    <div id="menu"><span>{$lang.hello}<strong>{$visitor.user_name}</strong> <a href="index.php?act=logout">[{$lang.logout}]</a> <a href="{$site_url}/index.php" target="_blank">[{$lang.ecmall_index}]</a></span>
-    <a href="javascript:;" class="menu_btn1" id="iframe_refresh">{$lang.refresh}</a>
-    <a href="javascript:;" class="menu_btn2" id="clear_cache">{$lang.clear_cache}</a>
+    <div id="menu"><span>您好，<strong>{$user_name}</strong> <a href="index.php?act=logout">[退出]</a> <a href="{$site_url}/index.php" target="_blank">[商城首页]</a></span>
+    <a href="javascript:;" class="menu_btn1" id="iframe_refresh">刷新</a>
+    <a href="javascript:;" class="menu_btn2" id="clear_cache">更新缓存</a>
     <a href="#" id="back_btn"><img src="{{$theme}}/style/images/tiring_room_nav.gif" /></a>
     </div>
     <ul id="nav">
