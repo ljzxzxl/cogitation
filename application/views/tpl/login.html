@@ -40,9 +40,9 @@ $(function(){
         <tr>
             <th  colspan="4">
             <input class="btnEnter" type="submit" name="" value="" />
-            <input class="btnBack" type="button" name="" value="" onclick="go('{$site_url}')"/>
-            <input class="btnBorget" type="button" name="" value="" onclick="go('{$site_url}/index.php?app=find_password')"/>
-            <p>&copy; 2003-2009 ShopEx inc. Powered by ECMall</p>
+            <input class="btnBack" type="button" name="" value="" onclick="go('{{$site_url}}')"/>
+            <input class="btnBorget" type="button" name="" value="" onclick="go('{{$site_url}}/index.php?c=forget_password')"/>
+            {{include file="copyright.html"}}
             </th>
         </tr>
     </form>

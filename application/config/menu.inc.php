@@ -14,11 +14,11 @@ function Nav_Menu()
 			'children'  => array(
 				'welcome'   => array(
 					'text'  => '欢迎页面',
-					'url'   => 'index.php?c=dashboard&m=welcome',
+					'url'   => 'index.php?c=welcome',
 				),
 				'aboutus'   => array(
 					'text'  => '关于我们',
-					'url'   => 'index.php?c=dashboard&m=aboutus',
+					'url'   => 'index.php?c=aboutus',
 				),
 			),
 		),
