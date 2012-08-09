@@ -9,8 +9,12 @@ class Message extends CI_Controller {
 	
 	public function index()
 	{
-		$message = $this->input->get('message');
-		$this->Message_model->show_message($message);
+		$this->Message_model->show_message("消息提示测试");
+		/*批量参数接收测试*/
+		$args = $this->System_model->get_args("a","b");
+		print_r($args);
+		extract($args);
+		echo "\$a = {$a}; \$b = {$b};";
 	}
 }
 
