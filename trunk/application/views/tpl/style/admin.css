@@ -16,10 +16,10 @@ html,body {padding: 0;margin: 0; overflow-x:hidden; overflow-y:auto;}
 .red {color:red;}
 .bold {font-weight: bold; color: #545454}
 
-.back_nav { width: 400px; height: 350px; position: absolute; top: 40px; right: 20px; z-index: 100; display: none;}
-    .back_nav_list { width: 366px; height: 336px; padding: 30px 0 0 30px; position: absolute; top: 0px; left: 0px; z-index: 2; background: #f5fbef; border: 1px solid #a9d671;}
+.back_nav { width: 550px; height: 350px; position: absolute; top: 40px; right: 20px; z-index: 100; display: none;}
+    .back_nav_list { width: 518px; height: 336px; padding: 30px 0 0 30px; position: absolute; top: 0px; left: 0px; z-index: 2; background: #f5fbef; border: 1px solid #a9d671;}
     .shadow { width: 398px; height: 318px; position: absolute; bottom: 0px; right: 0px; z-index: 1; background: #afb1b3; -moz-opacity: 0.5; opacity:.5; filter: alpha(opacity=50);}
-        .back_nav_list dl { float: left; width: 85px; height: 160px;}
+        .back_nav_list dl { float: left; width: 85px; height: 190px;}
             .back_nav_list dt {font-size: 14px; font-weight: bold; color: #0c4887; margin-bottom: 10px;}
             .back_nav_list dd {line-height: 20px;}
             .back_nav_list a {font-weight: bold; color: #454543; text-decoration: none;}
