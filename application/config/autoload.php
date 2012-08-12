@@ -117,5 +117,8 @@ include_once(APPPATH.'core/function.php');
 /* 导航栏初始化 */
 include_once(APPPATH.'config/menu.inc.php');
 
+/* 启用SESSION */
+session_start();
+
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */

@@ -10,8 +10,12 @@ class Message_model extends CI_Model {
         parent::__construct();
     }
     
-    function show_message($message)
+    function show_message($message, $text='返回上一页', $href='javascript:history.back()')
     {
+		$links[] = array('text' => $text, 'href' => $href);
+		$redirect = (strstr($href, 'javascript:') !== false) ? $href : "location.href='{$href}'";
+		$this->ci_smarty->assign("links",$links);
+		$this->ci_smarty->assign("redirect",$redirect);
 		$this->ci_smarty->assign("message",$message);
 		return $this->ci_smarty->display("message.html");
     }
