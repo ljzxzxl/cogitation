@@ -50,5 +50,19 @@ class System_model extends CI_Model {
 			}
 		return $arr;
 	}
+	
+	/**
+	 * 登录验证方法
+	 * 
+	 */
+	function auth($user_name, $password)
+	{
+		$info = $this->ci_mysql->getRow("SELECT * FROM ecm_member WHERE user_name = '{$user_name}'");
+		if ($info['password'] == md5($password)){
+			return $info['user_id'];
+		}else{
+			return false;
+		}
+	}
 }
 ?>

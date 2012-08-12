@@ -22,20 +22,20 @@ p {color: #999; border-top: 1px solid #cbe4f5; text-align: center; padding-top: 
 <h1>系统消息</h1>
 <dl>
     <dt>{{$message}}</dt>
-    {if $redirect}
+    {{if $redirect}}
     <dd>自动跳转至页面</dd>
-    {/if}
-    {foreach from=$links item=item}
-    <dd><a href="{$item.href}" class="forward">{$item.text}</a></dd>
-    {/foreach}
+    {{/if}}
+    {{foreach from=$links item=item}}
+    <dd><a href="{{$item.href}}" class="forward">{{$item.text}}</a></dd>
+    {{/foreach}}
 </dl>
-{if $redirect}
+{{if $redirect}}
 <script type="text/javascript">
 <!--
-window.setTimeout("{$redirect}", 5000);
+window.setTimeout("{{$redirect}}", 3000);
 //-->
 </script>
-{/if}
+{{/if}}
 {{include file="copyright.html"}}
 </body>
 </html>

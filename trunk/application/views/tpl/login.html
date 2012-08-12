@@ -22,24 +22,24 @@ $(function(){
 <div id="enter">
     <h1><img alt="网站后台" src="{{$theme}}/style/images/enter_logo.gif" /></h1>
     <table>
-    <form method="post">
+    <form method="post" action="index.php?c=login">
         <tr>
-            <td>用户名:</td>
+            <td width="40">用户名:</td>
             <td colspan="3"><input class="text" type="text" id="user_name" name="user_name" /></td>
         </tr>
         <tr>
-            <td>密&nbsp;&nbsp;&nbsp;码:</td>
+            <td width="40">密&nbsp;&nbsp;&nbsp;码:</td>
             <td class="width160"><input class="text" type="password" name="password" /></td>
-            <!--{if $captcha}-->
+            <!--{{if $captcha}}-->
             <td>验证码:</td>
             <td><input class="text2" type="text" name="captcha" /> <div class="validates"><img onclick="this.src='index.php?app=captcha&' + Math.round(Math.random()*10000)" style="cursor:pointer;" class="validate" src="index.php?app=captcha&{$random_number}" /></div></td>
-            <!--{else}-->
+            <!--{{else}}-->
             <td colspan="2">&nbsp;</td>
-            <!--{/if}-->
+            <!--{{/if}}-->
         </tr>
         <tr>
             <th  colspan="4">
-            <input class="btnEnter" type="submit" name="" value="" />
+            <input class="btnEnter" type="submit" name="submit" value="" />
             <input class="btnBack" type="button" name="" value="" onclick="go('{{$site_url}}')"/>
             <input class="btnBorget" type="button" name="" value="" onclick="go('{{$site_url}}/index.php?c=forget_password')"/>
             {{include file="copyright.html"}}
