@@ -26,7 +26,7 @@ define('DIR_WRITE_MODE', 0777);
 | /application/libraries/Ci_mysql.php
 |
 */
-define('DB_HOST','localhost:3306');
+define('DB_HOST','192.168.100.108:3306');
 define('DB_NAME','cogitation');
 define('DB_USER','root');
 define('DB_PASSWORD','');
