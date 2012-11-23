@@ -9,7 +9,7 @@ class Message_model extends CI_Model {
     {
         parent::__construct();
     }
-    
+    //消息提示方法
     function show_message($message, $text='返回上一页', $href='javascript:history.back()')
     {
 		$links[] = array('text' => $text, 'href' => $href);
